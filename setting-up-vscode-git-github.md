@@ -150,3 +150,7 @@ Tip: You can jump to the definition with Ctrl+Click or open the definition to th
 <https://code.visualstudio.com/docs/languages/javascript>
 
 <https://code.visualstudio.com/docs/languages/ruby>
+
+## Github resources
+
+<https://skills.github.com/>
