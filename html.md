@@ -1,4 +1,4 @@
-# HTML and CSS
+# HTML
 
 HTML elements reference
 <https://developer.mozilla.org/en-US/docs/Web/HTML/Element>
