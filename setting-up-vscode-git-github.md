@@ -113,6 +113,8 @@ Type `?` into the input field to get a list of available commands you can execut
 
 `⌃ G` will let you navigate to a specific line in a file
 
+`Cmd + /` comment code
+
 The gear icon (More Actions... ⇧F9) opens a context menu with options to reset the setting to its default value as well as copy the setting ID or JSON name-value pair.
 
 Open the Settings Editor (⌘,)
