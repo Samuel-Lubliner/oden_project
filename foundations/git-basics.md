@@ -101,6 +101,33 @@ Includes changes related to only one feature or task of your program.
 - easy to revert a specific change without losing other changes
 - enables you to write better commit messages
 
+
+# Branches
+
+`git checkout -b <branch_name>` make new branches
+
+ `git checkout <branch_name>` change branch using
+
+`git branch` See all of your current branches
+
+`git merge <branch_name>` takes the changes you’ve committed in `branch_name` and adds them to the branch that you’re currently on.
+
+## Merge conflict
+
+When the same lines in a file will have been changed by two different branches.
+
+When you don’t need a branch anymore, it can be deleted using `git branch -d <branch_name>` if the branch has already been merged into main, or with `git branch -D <branch_name>` if it hasn’t.
+
+## Sharing code
+
+Another great use case for branches is to share code with others that you might not want to commit to your main branch (or feature branch) at all.
+
+
+
+
+
+
+
 More resources:
 
 Complete Git and GitHub Tutorial from Basics to Advanced - by Kunal Kushwaha <https://www.youtube.com/watch?v=apGV9Kg7ics>

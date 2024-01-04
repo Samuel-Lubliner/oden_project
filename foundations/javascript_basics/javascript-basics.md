@@ -110,3 +110,5 @@ a `TypeError` may be thrown when:
 - Google the error
 - Use the debugger <https://developer.chrome.com/docs/devtools/javascript/>
 - console.log()
+
+## Objects
