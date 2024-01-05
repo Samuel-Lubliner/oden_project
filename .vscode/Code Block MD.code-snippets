@@ -1,0 +1,47 @@
+{
+    "JavaScript Code Block": {
+        "prefix": "jsblock",
+        "body": [
+            "```js",
+            "$0",
+            "```"
+        ],
+        "description": "Insert JavaScript code block"
+    },
+    "Ruby Code Block": {
+        "prefix": "rubyblock",
+        "body": [
+            "```ruby",
+            "$0",
+            "```"
+        ],
+        "description": "Insert Ruby code block"
+    },
+    "HTML Code Block": {
+        "prefix": "htmlblock",
+        "body": [
+            "```html",
+            "$0",
+            "```"
+        ],
+        "description": "Insert HTML code block"
+    },
+    "CSS Code Block": {
+        "prefix": "cssblock",
+        "body": [
+            "```css",
+            "$0",
+            "```"
+        ],
+        "description": "Insert CSS code block"
+    },
+    "Bash Code Block": {
+        "prefix": "bashblock",
+        "body": [
+            "```bash",
+            "$0",
+            "```"
+        ],
+        "description": "Insert Bash code block"
+    }
+}
