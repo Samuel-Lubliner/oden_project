@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    backdrop-filter: blur(10px);
+}
+
+#library-container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+#books .col-md-4 {
+    margin-bottom: 20px;
+}
+
+.book-card {
+    border: 1px solid #ddd;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button {
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+dialog {
+    padding: 20px;
+    border: none;
+    background-color: #444;
+    color: white;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, label {
+    margin: 5px 0;
+}
+
+/* Accessibility Improvements */
+[role="button"], button {
+    outline: none !important;
+}
+
+[tabindex]:focus, button:focus {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #5b9dd9;
+}
