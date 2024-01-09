@@ -45,6 +45,8 @@ When webpack runs, it goes through all of our files starting at any entry points
 
 In this example, we have a single entry point `/src/index.js`. The output file is the compiled version `dist/main.js`.
 
+Adjust our package.json file in order to make sure we mark our package as private, as well as removing the main entry. This is to prevent an accidental publish of your code.
+
 
 ## ES6 Modules
 
