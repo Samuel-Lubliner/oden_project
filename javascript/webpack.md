@@ -1,33 +1,61 @@
 # Webpack
 
-Webpack is the go-to tool across the web for bundling your modules. Another amazing feature is webpack’s ability to process and manipulate your code as it bundles.
+## Introduction
 
-Webpack can also manage your images and compress and optimize them for use on the web. Webpack can minify and uglify your code.
+- **Webpack** is a widely used tool for bundling and compiling JavaScript code.
+- It can process and manipulate code, manage images, and minify code through loaders and plugins.
 
-If you give webpack a file as an entry point, it will build a dependency graph based on all the imports/exports starting there, before bundling everything into a single `.js` file in `dist`. If you needed it to output multiple bundles, then each entry point you give Webpack will produce its own output bundle.
+## Lesson Overview
 
-Bundling JavaScript is fairly straightforward.
+- Topics:
+  - Webpack documentation and usage.
+  - Asset loading (CSS, images, fonts).
+  - Managing output with HtmlWebpackPlugin.
+  - Webpack configuration for development.
 
-For CSS, you can import your `.css` file directly into your JavaScript and for assets like images, they might be used inside your CSS or imported directly into your JavaScript. When you tell Webpack to bundle your files, it will come across these files and try to bundle them together or process any assets like images and copy them into `dist`.
+## Bundling
 
-Since these sorts of files are not JavaScript, Webpack requires including the correct loaders and rules.
+- Webpack creates a dependency graph and bundles into a single `.js` file in `dist`.
+- Multiple entry points result in multiple output bundles.
+- Non-JavaScript files (CSS, images, fonts) require specific loaders and rules.
+- Example: Image optimization during build.
 
 ## Html-webpack-plugin
 
-Automatically builds an HTML file in dist for us when we build our project. It will also then automatically add certain things to the HTML like our output bundle in a script tag.
+- Automates HTML file creation in `dist` during project build.
+- Adds script tags and other elements to HTML.
+- Can use a custom HTML template from `src`.
+- Example configuration:
 
-If we had our own `dist/index.html` then it would be overwritten! In order to preserve our own HTML, we can tell it to use a template and provide a path to our own HTML file that is in `src`.
+    \```javascript
+    const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-```js
-// webpack.config.js
+    // ...
+        plugins: [
+            new HtmlWebpackPlugin({
+                template: './src/template.html',
+            }),
+        ],
+    // ...
+    \```
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+## Assignment
 
-// ...
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: './src/template.html',
-        }),
-    ],
-// ...
-```
+- Tutorials cover:
+  - Managing website assets with webpack. <https://webpack.js.org/guides/asset-management/>
+  - Installing and configuring html-webpack-plugin. <https://rapidevelop.org/webpack/setup-html-webpack-plugin>
+  - Multiple entry points and output management.<https://webpack.js.org/guides/output-management/>
+  - Source maps for error tracking in bundled code. <https://webpack.js.org/guides/development/>
+  - `webpack-dev-server` configuration.
+  - Webpack development and production modes. <https://webpack.js.org/guides/production/>
+  - Introduction to webpack-merge for mode management.
+- Optional exploration of advanced features like code-splitting, lazy-loading, and tree-shaking. <https://webpack.js.org/guides/>
+
+## Knowledge Check
+
+1. **Loading CSS**: Import `.css` files directly into JavaScript. Webpack bundles them using appropriate loaders.
+2. **Loading Images**: Use specific loaders/rules to process and bundle images into `dist`.
+3. **Loading Fonts**: Similar to images, fonts require specific loaders/rules for bundling.
+4. **Automating HTML Builds**: Use `html-webpack-plugin` to build HTML files in `dist`.
+5. **Custom HTML Template in `src`**: Configure `html-webpack-plugin` to use a custom HTML template from `src`.
+6. **Error Tracking in Bundled Code**: Implement source maps to track down errors in specific source files (like `index.js`, `a.js`, `b.js`) in the bundled code.
