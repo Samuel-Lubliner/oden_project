@@ -51,6 +51,8 @@ Warning: Do not compile untrusted code with webpack. It could lead to execution 
 
 ## ES6 Modules
 
+Use babel to convert modules for browsers that don't support them
+
 - ES6 modules offer an efficient way to organize code into reusable components.
 - They use `import` and `export` statements to share code between different files.
 
