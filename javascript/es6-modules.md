@@ -47,11 +47,32 @@ In this example, we have a single entry point `/src/index.js`. The output file i
 
 Adjust our package.json file in order to make sure we mark our package as private, as well as removing the main entry. This is to prevent an accidental publish of your code.
 
+Warning: Do not compile untrusted code with webpack. It could lead to execution of malicious code on your computer, remote servers, or in the Web browsers of the end users of your application.
 
 ## ES6 Modules
 
 - ES6 modules offer an efficient way to organize code into reusable components.
 - They use `import` and `export` statements to share code between different files.
+
+```js
+// a file called functionOne.js
+const functionOne = () => console.log('FUNCTION ONE!');
+
+export { functionOne };
+```
+
+```js
+// another JS file
+import { functionOne } from './functionOne';
+
+functionOne(); // this should work as expected!
+```
+
+There are many benefits to writing code in modules such as code reuse.
+
+There are also the same benefits as when using factory functions or the module pattern (the module pattern and ES6 modules are not the same things; this naming convention is frustrating). With the introduction of ES6 Modules, the module pattern (IIFEs) is not needed anymore, though you might still encounter them.
+
+When using ES6 modules, only what is exported can be accessed in other modules by importing. Additionally, any declarations made in a module are not automatically added to the global scope. By using ES6 modules, you can keep different parts of your code cleanly separated, which makes writing and maintaining your code much easier and less error-prone. Keep in mind that you can export constructors, classes and factory functions from your modules.
 
 ### Types of Exports
 
@@ -64,4 +85,3 @@ Adjust our package.json file in order to make sure we mark our package as privat
 
 - **Task Runners**: Tools like Gulp and Grunt automate repetitive tasks in development.
 - **npm Automation Scripts**: Defined in `package.json` to automate various development tasks.
-
