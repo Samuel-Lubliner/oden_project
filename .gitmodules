@@ -1,0 +1,3 @@
+[submodule "webpack-demo-2"]
+	path = webpack-demo-2
+	url = git@github.com:Samuel-Lubliner/webpack-demo-2.git
